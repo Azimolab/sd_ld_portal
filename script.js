@@ -11,6 +11,8 @@ var inProgress = true;
 var myFunc = function() {
     $('.page-content2').addClass('active');
     $('.page-content2').removeClass('exit');
+    document.querySelector('.button1').style.display = "block";
+
 }
 
 window.onload = function() {
@@ -69,22 +71,20 @@ $('.content__slide:nth-child(1) .button').on('click', function(e) {
 });
 
 
-
-$('.content__slide:nth-child(2) .button1').on('click', function() {
-    $('.page-content').addClass('exit');
-    $('.page-content').removeClass('active');
-    $('.page-content2').addClass('active');
-    $('.page-content2').removeClass('exit');
+$('.button1').on('click', function() {
+    $('.page-content2').addClass('exit');
+    $('.page-content2').removeClass('active');
+    $('.page-content').addClass('active');
+    $('.page-content').removeClass('exit');
     document.querySelector('.button1').style.display = "none";
     document.querySelector('.button2').style.display = "block";
 }.bind(void 0)); // let amount = 0;
 
-$('.content__slide:nth-child(2) .button2').on('click', function() {
-    $('.page-content').addClass('active');
-    $('.page-content').removeClass('exit');
-
-    $('.page-content2').addClass('exit');
-    $('.page-content2').removeClass('active');
+$('.button2').on('click', function() {
+    $('.page-content2').addClass('active');
+    $('.page-content2').removeClass('exit');
+    $('.page-content').addClass('exit');
+    $('.page-content').removeClass('active');
     document.querySelector('.button1').style.display = "block";
     document.querySelector('.button2').style.display = "none";
 }.bind(void 0)); // let amount = 0;
