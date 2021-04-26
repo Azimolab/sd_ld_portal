@@ -12,8 +12,15 @@ var myFunc = function() {
     $('.page-content2').addClass('active');
     $('.page-content2').removeClass('exit');
     document.querySelector('.button1').style.display = "block";
+    document.querySelector('.button3').style.display = "block";
 
 }
+
+$(".news-card2").click(function() {
+    window.open($(this).find("a:first").attr("href"));
+    return false;
+});
+
 
 window.onload = function() {
     setTimeout(myFunc, 5);
@@ -78,6 +85,7 @@ $('.button1').on('click', function() {
     $('.page-content').removeClass('exit');
     document.querySelector('.button1').style.display = "none";
     document.querySelector('.button2').style.display = "block";
+    document.querySelector('.button3').style.display = "none";
 }.bind(void 0)); // let amount = 0;
 
 $('.button2').on('click', function() {
@@ -87,4 +95,5 @@ $('.button2').on('click', function() {
     $('.page-content').removeClass('active');
     document.querySelector('.button1').style.display = "block";
     document.querySelector('.button2').style.display = "none";
+    document.querySelector('.button3').style.display = "block";
 }.bind(void 0)); // let amount = 0;
